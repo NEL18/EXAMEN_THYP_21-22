@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Examen THYP 2021</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <script src="https://use.fontawesome.com/2ddc4a0f9c.js"></script>
@@ -13,12 +13,15 @@
 
 <body>
   <div class="container">
-    <h4 style="text-align: left;"> Affichage des Items</h4>
+    <h4 style="text-align: center;"> Affichage des Items</h4>
     <div class="row" id="items">
     </div>
   </div>
   </div>
   <script>
+    url = "https://polemika.univ-paris8.fr/omk/api/items?item_set_id=2";
+    getData(url);
+
     function getData(url) {
       d3.queue()
         .defer(d3.json, url)
@@ -27,13 +30,10 @@
           showItems(results[0]);
         });
     }
-    
-    
-    //fonction recuepre les data
     function showItems(data) {
 
       let cards = d3.select('#items').selectAll(".col-3").data(data).enter()
-        .append('div').attr('class', 'col-sm-4 mb-12').style('margin-bottom', '10px')
+        .append('div').attr('class', 'col-sm-4 mb-12').style('margin-bottom', '20px')
         .append("div").attr('class', 'card');
 
       let cardBody = cards.append('div').attr('class', 'card-body');
