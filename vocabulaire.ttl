@@ -10,7 +10,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix schema: <http://schema.org/>.
 
-<https://github.com/NEL18/EXAM_THYP_21-22/edit/main/vocabulaire.ttl#>  ;
+<https://github.com/NEL18/EXAM_THYP_21-22/edit/main/vocabulaire.ttl#> a owl:Ontology ; ;
     dcterms:title "Student" .
 
 student:auteur a rdfs:Class ;
