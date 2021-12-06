@@ -12,58 +12,43 @@
 <https://github.com/NEL18/EXAM_THYP_21-22/vocabulaire.ttl#> a owl:Ontology ;
     dcterms:title "journal" .
 
-student:auteur a rdfs:Class ;
+mn:auteur a rdfs:Class ;
     rdfs:label "auteur" ;
     owl:sameAs foaf:Person ;
     vs:term_status "experimental" .
 
-student:news a rdfs:Class ;
+mn:news a rdfs:Class ;
     rdfs:label "news" ;
     owl:sameAs foaf:Person ;
     vs:term_status "experimental" .
 
-student:categorie a rdfs:Class ;
+mn:categorie a rdfs:Class ;
     rdfs:label "categorie" ;
     owl:sameAs foaf:Person ;
     vs:term_status "experimental" .
 
-student:suivi a rdfs:Class ;
+mn:suivi a rdfs:Class ;
     rdfs:label "suivi" ;
     owl:sameAs foaf:Person ;
     vs:term_status "experimental" .
 
 
-student:media a rdf:Property ;
+mn:media a rdf:Property ;
     rdfs:label "media" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-student:sujet a rdf:Property ;
+mn:sujet a rdf:Property ;
     rdfs:label "sujet" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-student:reference a rdf:Property ;
+mn:reference a rdf:Property ;
     rdfs:label "reference" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-student:nbrpersonne a rdf:Property ;
-    rdfs:label "nombre personne" ;
-    rdfs:domain o:Resource ;
-    vs:term_status "experimental" .
-
-student:enfant a rdf:Property ;
-    rdfs:label "enfant" ;
-    rdfs:domain o:Resource ;
-    vs:term_status "experimental" .
-
-student:adult a rdf:Property ;
-    rdfs:label "adult" ;
-    rdfs:domain o:Resource ;
-    vs:term_status "experimental" .
-
-student:largepub a rdf:Property ;
-    rdfs:label "large public" ;
+mn:public a rdf:Property ;
+    rdfs:label "public" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
