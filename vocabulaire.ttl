@@ -10,7 +10,7 @@
 @prefix mn: <https://github.com/NEL18/EXAM_THYP_21-22/vocabulaire.ttl#> .
 
 <https://github.com/NEL18/EXAM_THYP_21-22/vocabulaire.ttl#> a owl:Ontology ;
-    dcterms:title "Student" .
+    dcterms:title "journal" .
 
 student:auteur a rdfs:Class ;
     rdfs:label "auteur" ;
