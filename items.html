@@ -19,9 +19,6 @@
   </div>
   </div>
   <script>
-    url = "https://polemika.univ-paris8.fr/omk/api/items?item_set_id=2";
-    getData(url);
-//fonction recupere les datas
     function getData(url) {
       d3.queue()
         .defer(d3.json, url)
@@ -30,7 +27,9 @@
           showItems(results[0]);
         });
     }
-//fonction affichage data
+    
+    
+    //fonction recuepre les data
     function showItems(data) {
 
       let cards = d3.select('#items').selectAll(".col-3").data(data).enter()
@@ -41,11 +40,13 @@
       cardBody
         .append('h5').text((d) => d["o:id"])
         .append('h6').text((d) => d["o:title"])
-        .attr('id'+ d["o:id"])
+        .append('img')
+        .attr('id', (d, i) => 'imgCard' + d["o:id"])
+        .attr('class', 'center card-img-top')
         .attr('src', (d) => {
-          d3.json([0]["@id"], function (error, results) {
+          d3.json(d["o:media"][0]["@id"], function (error, results) {
             if (error) throw error;
-            d3.select("#" + d["o:id"]).attr("src", results["o:source"]);
+            d3.select("#" + "imgCard" + d["o:id"]).attr("src", results["o:source"]);
           });
         });
 
